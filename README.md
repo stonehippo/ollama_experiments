@@ -1,4 +1,4 @@
-# ollama_experiments
+# Ollama Experiments
 
 Experiments with the [Ollama](https://olama.com) local large language model tools.
 
