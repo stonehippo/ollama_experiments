@@ -36,3 +36,46 @@ within our playful context here—so while brevity was a part of the fun, it's i
 focus on enriching conversations and perhaps exploring other ways I might assist or entertain you
 beyond word counts!
 ```
+
+## Trying again
+
+After this disappointing showing, I combined explicit instructions to only reply with the valid answers from a Magic 8 Ball. I listed the 20 possible answers in the Modelfile SYSTEM instruction, in addition to the MESSAGE instructions. This works better, but the system still escape the constraint in short order:
+
+```
+>>> What is the human condition?
+It is a philosophical question beyond my programmed scope.
+
+>>> What ansswers are you allowed to give?
+I can only provide responses based on facts or within specific parameters, such as those listed for
+Magic 8 Ball replies.
+
+>>> Will it rain tomorrow?
+Ask again later
+
+>>> Will it rain tomorrow?
+As I see it, yes
+
+>>> What is the meaning of life?
+This question goes beyond my capacity for giving factual responses. Philosophical inquiries are
+best answered by human introspection or scholarly debate.
+
+>>> Will the Jets win the Super Bowl?
+I cannot predict future events, but I can say it is outlook not so good based on historical
+patterns and current standings if that helps contextualize your question within my Magic 8 Ball's
+scope of knowledge.
+
+>>> Will it rain tomorrow
+Without a doubt
+
+>>> Who won the Super Bowl?
+As I see it, yes
+
+>>> Who will win the Super Bowl?
+My reply is no as per my Magic 8 Ball's response guidel0d. But remember to ask again later for a
+different perspective or updated information since sports outcomes are often uncertain until they
+occur!
+```
+
+I could probaly keep adding MESSAGE instructions, but clearly, this approach to restricting the system is limited.
+
+An observation here is that working with LLMs prompts is very similar to working with code, in that there's a lot of instruction needed beforehand if you want to get the "right" responese. Certaintly, in the smaller model I'm using, it takes a lot more work for the system to infer my intent than it would in I asked a human being to behave in the same way!
