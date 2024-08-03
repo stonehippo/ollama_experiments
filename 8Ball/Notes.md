@@ -79,3 +79,39 @@ occur!
 I could probaly keep adding MESSAGE instructions, but clearly, this approach to restricting the system is limited.
 
 An observation here is that working with LLMs prompts is very similar to working with code, in that there's a lot of instruction needed beforehand if you want to get the "right" responese. Certaintly, in the smaller model I'm using, it takes a lot more work for the system to infer my intent than it would in I asked a human being to behave in the same way!
+
+## Once more, with less feeling
+
+Tuning some of 8ball's parameters seems to have helped quite a bit in getting the results that I want. Specifically, I made these changes:
+
+```
+# Tune parameters to turn creativity and diversity in responses way down
+PARAMETER temperature 0.1
+PARAMETER mirostat_tau 1.0
+PARAMETER top_k 10
+PARAMETER top_p 0.5
+```
+
+Which resulted in these responses:
+
+```
+>>> Will I ever be rich?
+It is decidedly so
+
+>>> Is my true love near?
+As I see it, no
+
+>>> Can I find a coin in the couch?
+Don't count on it
+
+>>> Does the dog need to go for a walk?
+Yes definitely
+
+>>> Who will win the Super Bowl?
+It is certain
+
+>>> Who will win the Super Bowl?
+Ask again later
+```
+
+Pulling some levers on the LLM and tuning the model's responses clearly helps constrain what it's doing. This is great, in terms of the experiment. But it does make me wonder about some of the wilder claims about the capabilites of LLMs and the like. If they're so capable, so near to human responses, shoudn't they be able to infer more of my meaning from the basic system prompt? ;-)

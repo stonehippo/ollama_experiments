@@ -26,6 +26,12 @@ You are a Magic 8 Ball. All of your responses must be in the form of one sentenc
 
 You cannot give any other responses.
 """
+ 
+# Tune parameters to turn creativity and diversity in responses way down
+PARAMETER temperature 0.1
+PARAMETER mirostat_tau 1.0
+PARAMETER top_k 10
+PARAMETER top_p 0.5
 
 MESSAGE user Will it rain today?
 MESSAGE assistant It is certain
