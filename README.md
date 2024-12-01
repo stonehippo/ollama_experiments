@@ -11,3 +11,4 @@ I also remain concerned about the underlying issues of LLMS, including the prove
 ## Experiements
 
 - [PhiGM](PhiGM) - A TTRPG GM in a box (maybe). Based on [Phi-3 Mini](https://ollama.com/library/phi3).
+- [8Ball](OBall) - An attempt to constrain an LLM to act like a Magic 8 ball, and nothing else.
